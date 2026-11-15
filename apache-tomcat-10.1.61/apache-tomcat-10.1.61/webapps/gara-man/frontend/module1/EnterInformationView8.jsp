@@ -5,6 +5,7 @@
 <%@ page import="backend.entity.*" %>
 <%@ page import="java.util.*"%>
 <%@ page import="java.time.LocalDate" %>
+<%@ page import="java.net.URLEncoder,java.nio.charset.StandardCharsets" %>
 <%@ page import="backend.dao.ServiceRequestReceipt8DAO" %>
 <%
     Integer idKH = (Integer) session.getAttribute("idKH");
@@ -13,6 +14,13 @@
 
     Service8DAO serviceDao = new Service8DAO();
     ArrayList <Service8> arr = serviceDao.getDichVu();
+
+    Appointment8 lichHenDaChon = (Appointment8) session.getAttribute("lichHen");
+    String quayLaiUrl = "BookAppointmentView8.jsp";
+    if (lichHenDaChon != null) {
+        quayLaiUrl += "?ngayHen=" + URLEncoder.encode(lichHenDaChon.getNgayHen(), StandardCharsets.UTF_8)
+                + "&amp;gioHen=" + URLEncoder.encode(lichHenDaChon.getGioHen(), StandardCharsets.UTF_8);
+    }
 %>
 <%
 String thongBao = "";
@@ -101,9 +109,12 @@ if ("POST".equalsIgnoreCase(request.getMethod())) {
             cursor: pointer;
         }
         .choice option { background: #fff; color: #000; font-weight: normal; }
-        .choice:focus-visible, button:focus-visible { outline: 3px solid #086287; outline-offset: 3px; }
-        .actions { display: flex; justify-content: center; margin-top: 86px; }
-        .confirm-button, .close-button {
+        .choice:focus-visible, button:focus-visible, .back-button:focus-visible { outline: 3px solid #086287; outline-offset: 3px; }
+        .actions { display: flex; justify-content: center; flex-wrap: wrap; gap: 16px; margin-top: 86px; }
+        .confirm-button, .close-button, .back-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
             min-width: 88px;
             min-height: 26px;
             padding: 4px 10px;
@@ -111,9 +122,10 @@ if ("POST".equalsIgnoreCase(request.getMethod())) {
             background: #5bc8e8;
             color: #000;
             font: bold 12px Arial, sans-serif;
+            text-decoration: none;
             cursor: pointer;
         }
-        button:hover { background: #42bce1; }
+        button:hover, .back-button:hover { background: #42bce1; }
         .error { color: #a71a1a; line-height: 1.5; font-size: 15px; }
         .error a { color: #075979; }
         dialog { width: min(460px, calc(100% - 32px)); padding: 28px; border: 1px solid #111; }
@@ -131,7 +143,7 @@ if ("POST".equalsIgnoreCase(request.getMethod())) {
             .service-row, .vehicle-row { gap: 8px; }
             .choice { min-height: 28px; }
             .actions { margin-top: 64px; }
-            .confirm-button { min-height: 40px; }
+            .confirm-button, .back-button { min-height: 40px; }
             .summary-row { grid-template-columns: 105px minmax(0, 1fr); }
         }
     </style>
@@ -175,10 +187,11 @@ if ("POST".equalsIgnoreCase(request.getMethod())) {
                        maxlength="20" required>
             </div>
             <div class="actions">
+                <a class="back-button" href="<%= quayLaiUrl %>">QUAY LẠI</a>
                 <button class="confirm-button" type="submit">XÁC NHẬN</button>
             </div>
             <p class="error" id="booking-error" role="alert" hidden>
-                Vui lòng <a id="return-to-booking" href="dat-lich.jsp">chọn ngày và giờ hẹn trong tương lai</a> trước khi xác nhận.
+                Vui lòng <a id="return-to-booking" href="<%= quayLaiUrl %>">chọn ngày và giờ hẹn trong tương lai</a> trước khi xác nhận.
             </p>
         </form>
         <p role="status"><%= thongBao %></p>

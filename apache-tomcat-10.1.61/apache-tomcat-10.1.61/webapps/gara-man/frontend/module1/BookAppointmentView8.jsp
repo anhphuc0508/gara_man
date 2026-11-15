@@ -78,8 +78,11 @@
             cursor: pointer;
         }
         .picker:focus-within { outline: 3px solid #086287; outline-offset: 3px; }
-        .actions { margin-top: 66px; margin-left: 210px; }
-        .continue-button {
+        .actions { display: flex; justify-content: center; gap: 16px; margin-top: 66px; }
+        .continue-button, .back-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
             width: 140px;
             min-height: 56px;
             padding: 8px;
@@ -87,24 +90,24 @@
             background: #5bc8e8;
             color: #000;
             font: 20px Arial, sans-serif;
+            text-decoration: none;
             cursor: pointer;
         }
-        .continue-button:hover { background: #42bce1; }
-        .continue-button:focus-visible { outline: 3px solid #086287; outline-offset: 4px; }
+        .continue-button:hover, .back-button:hover { background: #42bce1; }
+        .continue-button:focus-visible, .back-button:focus-visible { outline: 3px solid #086287; outline-offset: 4px; }
         @media (max-width: 540px) {
             .page { min-height: calc(100svh - 32px); margin-block: 16px; }
             h1 { font-size: 30px; }
             .booking-form { margin-top: 66px; }
             .form-row > label { flex-basis: 100px; }
-            .actions { margin-left: 100px; }
+            .actions { gap: 12px; }
         }
     </style>
 </head>
-%>
 <body>
     <main class="page">
         <h1>ĐẶT LỊCH</h1>
-        <form class="booking-form" id="booking-form" action="dat-lich.jsp" method="post">
+        <form class="booking-form" id="booking-form" action="BookAppointmentView8.jsp" method="post">
             <div class="form-row">
                 <label for="appointment-date">NGÀY HẸN:</label>
                 <div class="picker">
@@ -120,6 +123,7 @@
                 </div>
             </div>
             <div class="actions">
+                <a class="back-button" href="MainCustomerView8.jsp">QUAY LẠI</a>
                 <button class="continue-button" type="submit">TIẾP TỤC</button>
             </div>
         </form>

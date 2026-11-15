@@ -7,7 +7,7 @@
     response.setHeader("Pragma", "no-cache");
     if (session.getAttribute("thanhVien") != null) {
         String trangChu = "ADMIN".equals(session.getAttribute("vaiTro"))
-                ? "/frontend/module2/MainManagerView8.jsp" : "/frontend/module1/index.jsp";
+                ? "/frontend/module2/MainManagerView8.jsp" : "/frontend/module1/MainCustomerView8.jsp";
         response.sendRedirect(request.getContextPath() + trangChu);
         return;
     }
@@ -48,7 +48,7 @@
                         trangChu = "/frontend/module2/MainManagerView8.jsp";
                     } else {
                         phienMoi.setAttribute("idKH", thanhVien.getId());
-                        trangChu = "/frontend/module1/index.jsp";
+                        trangChu = "/frontend/module1/MainCustomerView8.jsp";
                     }
                     response.setStatus(303);
                     response.setHeader("Location", request.getContextPath() + trangChu);
