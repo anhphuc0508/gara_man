@@ -2,8 +2,4 @@
 <%@ include file="/WEB-INF/jspf/auth-common.jspf" %>
 <div class="account-bar">
     <span>Xin chào, <strong><%= authHtml(((backend.entity.Member8) session.getAttribute("thanhVien")).getHoTen()) %></strong></span>
-    <form class="logout-form" action="<%= request.getContextPath() %>/frontend/LogoutView8.jsp" method="post">
-        <input type="hidden" name="csrfToken" value="<%= authHtml(session.getAttribute("csrfToken")) %>">
-        <button class="logout-button" type="submit">Đăng xuất</button>
-    </form>
 </div>

@@ -6,16 +6,14 @@
     String ngayBatDau = request.getParameter("ngayBatDau");
     String ngayKetThuc = request.getParameter("ngayKetThuc");
     String loai = request.getParameter("loai");
-    String danhMuc = request.getParameter("danhMuc");
     String idHangMuc = request.getParameter("idHangMuc");
-    if (!"tat-ca".equals(danhMuc) && !"dich-vu".equals(danhMuc) && !"phu-tung".equals(danhMuc)) danhMuc = loai;
     String quayLaiUrl = managerUrl("ServicePartStatView8.jsp", "ngayBatDau", ngayBatDau,
-            "ngayKetThuc", ngayKetThuc, "danhMuc", danhMuc);
+            "ngayKetThuc", ngayKetThuc);
     if (idHangMuc != null && idHangMuc.matches("[1-9]\\d*")
             && ngayBatDau != null && ngayKetThuc != null
             && ("dich-vu".equals(loai) || "phu-tung".equals(loai))) {
         quayLaiUrl = managerUrl("InvoiceListView8.jsp", "id", idHangMuc, "loai", loai,
-                "ngayBatDau", ngayBatDau, "ngayKetThuc", ngayKetThuc, "danhMuc", danhMuc);
+                "ngayBatDau", ngayBatDau, "ngayKetThuc", ngayKetThuc);
     }
 
     Bill8 hoaDon = null;
