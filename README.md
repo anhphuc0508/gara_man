@@ -1,4 +1,5 @@
 Truy cập theo đường dẫn để có thể vào được thư mục hệ thống: `apache-tomcat-10.1.61\apache-tomcat-10.1.61\webapps\gara-man`
+
 Cách chạy project:
 Yêu cầu: JDK 21 và MySQL 8.
 1. Tải project về máy và giải nén.
