@@ -1,0 +1,30 @@
+<%@ page pageEncoding="UTF-8" %>
+<%!
+    private String managerHtml(Object value) {
+        if (value == null) return "";
+        return String.valueOf(value).replace("&", "&amp;")
+                .replace("<", "&lt;").replace(">", "&gt;")
+                .replace("\"", "&quot;").replace("'", "&#39;");
+    }
+
+    private String managerUrl(String page, String... parameters) {
+        StringBuilder url = new StringBuilder(page);
+        for (int index = 0; index + 1 < parameters.length; index += 2) {
+            String value = parameters[index + 1];
+            if (value == null || value.isBlank()) continue;
+            url.append(url.indexOf("?") < 0 ? '?' : '&');
+            url.append(java.net.URLEncoder.encode(parameters[index], java.nio.charset.StandardCharsets.UTF_8));
+            url.append('=');
+            url.append(java.net.URLEncoder.encode(value, java.nio.charset.StandardCharsets.UTF_8));
+        }
+        return url.toString();
+    }
+
+    private String managerMoney(long value) {
+        return String.format(java.util.Locale.forLanguageTag("vi-VN"), "%,d", value) + " đ";
+    }
+
+    private String managerDate(java.util.Date value) {
+        return value == null ? "" : new java.text.SimpleDateFormat("dd/MM/yyyy").format(value);
+    }
+%>

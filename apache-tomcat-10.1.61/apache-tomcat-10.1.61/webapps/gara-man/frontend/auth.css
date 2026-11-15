@@ -12,14 +12,11 @@
 .login-actions { display: flex; justify-content: center; margin-top: 34px; }
 .login-button { min-width: 148px; min-height: 44px; padding: 10px 20px; border: 1px solid #111; border-radius: 0; background: #5bc8e8; color: #000; font: bold 16px "Times New Roman", serif; cursor: pointer; }
 .login-button:hover { background: #42bce1; }
-.login-page input:focus-visible, .login-page button:focus-visible, .logout-button:focus-visible { outline: 3px solid #086287; outline-offset: 3px; }
+.login-page input:focus-visible, .login-page button:focus-visible { outline: 3px solid #086287; outline-offset: 3px; }
 .login-message { margin: 12px 0 0; color: #075979; font-size: 15px; line-height: 1.5; text-align: center; }
 .login-error { color: #a71a1a; }
 .account-bar { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 0 0; font: 14px/1.5 "Times New Roman", serif; }
 .account-bar > span { min-width: 0; overflow-wrap: anywhere; }
-.logout-form { flex-shrink: 0; margin: 0; }
-.logout-button { min-height: 32px; padding: 4px 10px; border: 1px solid #111; border-radius: 0; background: #fff; color: #000; font: 14px "Times New Roman", serif; cursor: pointer; }
-.logout-button:hover { background: #e9f8fc; }
 .customer-account-bar { padding: 0 24px; }
 @media (max-width: 540px) {
     .login-body { padding: 12px; }
