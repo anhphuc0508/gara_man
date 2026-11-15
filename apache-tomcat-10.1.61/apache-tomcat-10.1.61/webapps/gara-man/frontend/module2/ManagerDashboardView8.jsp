@@ -4,8 +4,7 @@
 <%
     String thongKeUrl = managerUrl("ServicePartStatView8.jsp",
             "ngayBatDau", request.getParameter("ngayBatDau"),
-            "ngayKetThuc", request.getParameter("ngayKetThuc"),
-            "danhMuc", request.getParameter("danhMuc"));
+            "ngayKetThuc", request.getParameter("ngayKetThuc"));
 %>
 <!DOCTYPE html>
 <html lang="vi">

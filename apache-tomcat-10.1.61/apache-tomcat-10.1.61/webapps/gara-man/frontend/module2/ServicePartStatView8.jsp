@@ -9,8 +9,6 @@
     String ngayKetThuc = request.getParameter("ngayKetThuc");
     if (ngayBatDau == null) ngayBatDau = "";
     if (ngayKetThuc == null) ngayKetThuc = "";
-    String danhMuc = request.getParameter("danhMuc");
-    if (!"dich-vu".equals(danhMuc) && !"phu-tung".equals(danhMuc)) danhMuc = "tat-ca";
 
     String loi = "";
     boolean daChonNgay = false;
@@ -32,11 +30,11 @@
     ArrayList<ServiceStat8> dsDichVu = new ArrayList<>();
     ArrayList<SparePartStat8> dsPhuTung = new ArrayList<>();
     if (daChonNgay) {
-        if (!"phu-tung".equals(danhMuc)) dsDichVu = new ServiceStat8DAO().getDichVu(ngayBatDau, ngayKetThuc);
-        if (!"dich-vu".equals(danhMuc)) dsPhuTung = new SparePartStat8DAO().getTKPhuTung(ngayBatDau, ngayKetThuc);
+        dsDichVu = new ServiceStat8DAO().getDichVu(ngayBatDau, ngayKetThuc);
+        dsPhuTung = new SparePartStat8DAO().getTKPhuTung(ngayBatDau, ngayKetThuc);
     }
     String quayLaiUrl = managerUrl("ManagerDashboardView8.jsp",
-            "ngayBatDau", ngayBatDau, "ngayKetThuc", ngayKetThuc, "danhMuc", danhMuc);
+            "ngayBatDau", ngayBatDau, "ngayKetThuc", ngayKetThuc);
 %>
 <!DOCTYPE html>
 <html lang="vi">
@@ -44,13 +42,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Danh sách thống kê dịch vụ/phụ tùng</title>
-    <link rel="stylesheet" href="manager.css?v=20261114-2">
+    <link rel="stylesheet" href="manager.css?v=20261115-1">
 </head>
 <body>
 <main class="page stat-page">
     <h1>DANH SÁCH THỐNG KÊ DỊCH VỤ/PHỤ TÙNG</h1>
     <form class="date-form" action="ServicePartStatView8.jsp" method="get">
-        <input type="hidden" name="danhMuc" value="<%= managerHtml(danhMuc) %>">
         <div class="date-row">
             <label for="start-date">Ngày Bắt Đầu:</label>
             <span class="date-picker">
@@ -73,18 +70,6 @@
         <% } %>
     </form>
 
-    <form class="filter-form" action="ServicePartStatView8.jsp" method="get">
-        <input type="hidden" name="ngayBatDau" value="<%= managerHtml(ngayBatDau) %>">
-        <input type="hidden" name="ngayKetThuc" value="<%= managerHtml(ngayKetThuc) %>">
-        <label for="category">DANH MỤC:</label>
-        <select class="category-select" id="category" name="danhMuc">
-            <option value="tat-ca" <%= "tat-ca".equals(danhMuc) ? "selected" : "" %>>TẤT CẢ</option>
-            <option value="dich-vu" <%= "dich-vu".equals(danhMuc) ? "selected" : "" %>>DỊCH VỤ</option>
-            <option value="phu-tung" <%= "phu-tung".equals(danhMuc) ? "selected" : "" %>>PHỤ TÙNG</option>
-        </select>
-        <button class="button" type="submit">LỌC</button>
-    </form>
-
     <div class="table-wrap">
         <table class="stat-table" aria-label="Thống kê doanh thu dịch vụ và phụ tùng">
             <thead>
@@ -94,9 +79,9 @@
                 <% int stt = 1;
                 for (ServiceStat8 dv : dsDichVu) {
                     String chiTietUrl = managerUrl("InvoiceListView8.jsp", "id", String.valueOf(dv.getId()),
-                            "loai", "dich-vu", "ngayBatDau", ngayBatDau, "ngayKetThuc", ngayKetThuc, "danhMuc", danhMuc);
+                            "loai", "dich-vu", "ngayBatDau", ngayBatDau, "ngayKetThuc", ngayKetThuc);
                 %>
-                <tr data-category="dich-vu">
+                <tr>
                     <td><%= stt++ %></td>
                     <td><%= managerHtml(dv.getMaDV()) %></td>
                     <td><%= managerHtml(dv.getTenDV()) %></td>
@@ -107,9 +92,9 @@
                 <% }
                 for (SparePartStat8 pt : dsPhuTung) {
                     String chiTietUrl = managerUrl("InvoiceListView8.jsp", "id", String.valueOf(pt.getId()),
-                            "loai", "phu-tung", "ngayBatDau", ngayBatDau, "ngayKetThuc", ngayKetThuc, "danhMuc", danhMuc);
+                            "loai", "phu-tung", "ngayBatDau", ngayBatDau, "ngayKetThuc", ngayKetThuc);
                 %>
-                <tr data-category="phu-tung">
+                <tr>
                     <td><%= stt++ %></td>
                     <td><%= managerHtml(pt.getMaPhuTung()) %></td>
                     <td><%= managerHtml(pt.getTen()) %></td>

@@ -8,8 +8,6 @@
     String ngayBatDau = request.getParameter("ngayBatDau");
     String ngayKetThuc = request.getParameter("ngayKetThuc");
     String loai = request.getParameter("loai");
-    String danhMuc = request.getParameter("danhMuc");
-    if (!"tat-ca".equals(danhMuc) && !"dich-vu".equals(danhMuc) && !"phu-tung".equals(danhMuc)) danhMuc = loai;
 
     if (idParam == null || ngayBatDau == null || ngayKetThuc == null || loai == null) {
         response.sendRedirect("ServicePartStatView8.jsp");
@@ -32,7 +30,7 @@
 
     ArrayList<Bill8> dsHoaDon = new Bill8DAO().getHoaDon(id, ngayBatDau, ngayKetThuc, loai);
     String quayLaiUrl = managerUrl("ServicePartStatView8.jsp", "ngayBatDau", ngayBatDau,
-            "ngayKetThuc", ngayKetThuc, "danhMuc", danhMuc);
+            "ngayKetThuc", ngayKetThuc);
 %>
 <!DOCTYPE html>
 <html lang="vi">
@@ -53,7 +51,7 @@
                 for (Bill8 hoaDon : dsHoaDon) {
                     String chiTietUrl = managerUrl("InvoiceDetailView8.jsp", "idHD", String.valueOf(hoaDon.getId()),
                             "idHangMuc", String.valueOf(id), "loai", loai, "ngayBatDau", ngayBatDau,
-                            "ngayKetThuc", ngayKetThuc, "danhMuc", danhMuc);
+                            "ngayKetThuc", ngayKetThuc);
                 %>
                 <tr>
                     <td><%= stt++ %></td>
