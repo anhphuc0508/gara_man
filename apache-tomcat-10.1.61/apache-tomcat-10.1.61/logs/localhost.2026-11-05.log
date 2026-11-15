@@ -1,0 +1,849 @@
+05-Nov-2026 17:55:38.783 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+05-Nov-2026 17:55:38.783 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+05-Nov-2026 17:55:38.789 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@17f9344b')
+05-Nov-2026 17:56:28.965 SEVERE [http-nio-8080-exec-10] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/gara-man] threw exception [org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [17] in the jsp file: [/frontend/module2/ServicePartStatView8.jsp]
+Syntax error, insert ";" to complete LocalVariableDeclarationStatement
+14:     SparePartStat8DAO dao = new SparePartStat8DAO();
+15:     ArrayList<SparePartStat8> cac = dao.getTKPhuTung(ngayBatDau , ngayKetThuc); 
+16: 
+17:     String idn
+18: 
+19: %>
+20: <!DOCTYPE html>
+
+
+An error occurred at line: [127] in the jsp file: [/frontend/module2/ServicePartStatView8.jsp]
+dv cannot be resolved
+124:                             ) %> đ
+125:                         </td>
+126:                         <td>
+127:                             <a data-id="<%= dv.getId() %>"
+128:                                 href="InvoiceListView8.jsp?id=<%= dv.getId() %>&amp;loai=dich-vu">
+129:                                     Xem chi tiết
+130:                             </a>
+
+
+An error occurred at line: [128] in the jsp file: [/frontend/module2/ServicePartStatView8.jsp]
+dv cannot be resolved
+125:                         </td>
+126:                         <td>
+127:                             <a data-id="<%= dv.getId() %>"
+128:                                 href="InvoiceListView8.jsp?id=<%= dv.getId() %>&amp;loai=dich-vu">
+129:                                     Xem chi tiết
+130:                             </a>
+131:                         </td>
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [17] in the jsp file: [/frontend/module2/ServicePartStatView8.jsp]
+Syntax error, insert ";" to complete LocalVariableDeclarationStatement
+14:     SparePartStat8DAO dao = new SparePartStat8DAO();
+15:     ArrayList<SparePartStat8> cac = dao.getTKPhuTung(ngayBatDau , ngayKetThuc); 
+16: 
+17:     String idn
+18: 
+19: %>
+20: <!DOCTYPE html>
+
+
+An error occurred at line: [127] in the jsp file: [/frontend/module2/ServicePartStatView8.jsp]
+dv cannot be resolved
+124:                             ) %> đ
+125:                         </td>
+126:                         <td>
+127:                             <a data-id="<%= dv.getId() %>"
+128:                                 href="InvoiceListView8.jsp?id=<%= dv.getId() %>&amp;loai=dich-vu">
+129:                                     Xem chi tiết
+130:                             </a>
+
+
+An error occurred at line: [128] in the jsp file: [/frontend/module2/ServicePartStatView8.jsp]
+dv cannot be resolved
+125:                         </td>
+126:                         <td>
+127:                             <a data-id="<%= dv.getId() %>"
+128:                                 href="InvoiceListView8.jsp?id=<%= dv.getId() %>&amp;loai=dich-vu">
+129:                                     Xem chi tiết
+130:                             </a>
+131:                         </td>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:70)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:189)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:593)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:409)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:381)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:367)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:736)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:440)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:359)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:310)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:197)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:57)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:164)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:86)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:782)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:71)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:348)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:413)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:71)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1308)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:2198)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:74)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:974)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:492)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:80)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+05-Nov-2026 17:56:52.397 SEVERE [http-nio-8080-exec-1] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/gara-man] threw exception [org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [126] in the jsp file: [/frontend/module2/ServicePartStatView8.jsp]
+dv cannot be resolved
+123:                             ) %> đ
+124:                         </td>
+125:                         <td>
+126:                             <a data-id="<%= dv.getId() %>"
+127:                                 href="InvoiceListView8.jsp?id=<%= dv.getId() %>&amp;loai=dich-vu">
+128:                                     Xem chi tiết
+129:                             </a>
+
+
+An error occurred at line: [127] in the jsp file: [/frontend/module2/ServicePartStatView8.jsp]
+dv cannot be resolved
+124:                         </td>
+125:                         <td>
+126:                             <a data-id="<%= dv.getId() %>"
+127:                                 href="InvoiceListView8.jsp?id=<%= dv.getId() %>&amp;loai=dich-vu">
+128:                                     Xem chi tiết
+129:                             </a>
+130:                         </td>
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [126] in the jsp file: [/frontend/module2/ServicePartStatView8.jsp]
+dv cannot be resolved
+123:                             ) %> đ
+124:                         </td>
+125:                         <td>
+126:                             <a data-id="<%= dv.getId() %>"
+127:                                 href="InvoiceListView8.jsp?id=<%= dv.getId() %>&amp;loai=dich-vu">
+128:                                     Xem chi tiết
+129:                             </a>
+
+
+An error occurred at line: [127] in the jsp file: [/frontend/module2/ServicePartStatView8.jsp]
+dv cannot be resolved
+124:                         </td>
+125:                         <td>
+126:                             <a data-id="<%= dv.getId() %>"
+127:                                 href="InvoiceListView8.jsp?id=<%= dv.getId() %>&amp;loai=dich-vu">
+128:                                     Xem chi tiết
+129:                             </a>
+130:                         </td>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:70)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:189)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:593)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:409)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:381)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:367)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:736)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:440)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:359)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:310)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:197)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:57)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:164)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:86)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:782)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:71)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:348)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:413)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:71)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1308)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:2198)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:74)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:974)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:492)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:80)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+05-Nov-2026 18:54:49.733 SEVERE [http-nio-8080-exec-8] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/gara-man] threw exception [org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [6] in the jsp file: [/frontend/module2/InvoiceListView8.jsp]
+Cannot cast from String to Integer
+3: <%@ page import="backend.entity.Bill8" %>
+4: <%@ page import="backend.dao.Bill8DAO" %>
+5: <%
+6:     int id = (Integer) request.getParameter("id");
+7:     String ngayBatDau = request.getParameter("ngayBatDau");
+8:     String ngayKetThuc = request.getParameter("ngayKetThuc");
+9:     Bill8DAO dao = new Bill8DAO();
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [6] in the jsp file: [/frontend/module2/InvoiceListView8.jsp]
+Cannot cast from String to Integer
+3: <%@ page import="backend.entity.Bill8" %>
+4: <%@ page import="backend.dao.Bill8DAO" %>
+5: <%
+6:     int id = (Integer) request.getParameter("id");
+7:     String ngayBatDau = request.getParameter("ngayBatDau");
+8:     String ngayKetThuc = request.getParameter("ngayKetThuc");
+9:     Bill8DAO dao = new Bill8DAO();
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:70)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:189)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:593)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:409)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:381)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:367)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:736)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:440)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:359)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:310)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:197)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:57)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:164)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:86)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:782)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:71)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:348)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:413)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:71)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1308)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:2198)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:74)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:974)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:492)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:80)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+05-Nov-2026 19:02:35.128 SEVERE [http-nio-8080-exec-8] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/gara-man] threw exception [org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [72] in the jsp file: [/frontend/module2/InvoiceListView8.jsp]
+dv cannot be resolved
+69:                     <tr data-category="dich-vu">
+70:                         <td><%= stt++ %></td>
+71:                         <td><%= b.getMaHD() %></td>
+72:                         <td><%= dv.getNgayThanhToan() %></td>
+73:                         <td>
+74:                             <a href="InvoiceDetailView8.jsp?id=<%= b.getId() %>&amp;loai=dich-vu&amp;ngayBatDau=<%= ngayBatDau %>&amp;ngayKetThuc=<%= ngayKetThuc %>">
+75:                                 Xem chi tiết
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [72] in the jsp file: [/frontend/module2/InvoiceListView8.jsp]
+dv cannot be resolved
+69:                     <tr data-category="dich-vu">
+70:                         <td><%= stt++ %></td>
+71:                         <td><%= b.getMaHD() %></td>
+72:                         <td><%= dv.getNgayThanhToan() %></td>
+73:                         <td>
+74:                             <a href="InvoiceDetailView8.jsp?id=<%= b.getId() %>&amp;loai=dich-vu&amp;ngayBatDau=<%= ngayBatDau %>&amp;ngayKetThuc=<%= ngayKetThuc %>">
+75:                                 Xem chi tiết
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:70)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:189)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:593)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:409)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:381)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:367)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:736)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:440)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:359)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:310)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:197)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:57)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:164)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:86)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:782)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:71)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:348)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:413)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:71)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1308)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:2198)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:74)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:974)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:492)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:80)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+05-Nov-2026 19:03:12.868 SEVERE [http-nio-8080-exec-2] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/gara-man] threw exception [An exception occurred processing [/frontend/module2/InvoiceListView8.jsp] at line [6]
+
+3: <%@ page import="backend.entity.Bill8" %>
+4: <%@ page import="backend.dao.Bill8DAO" %>
+5: <%
+6:     int id = Integer.parseInt(request.getParameter("id"));
+7:     String ngayBatDau = request.getParameter("ngayBatDau");
+8:     String ngayKetThuc = request.getParameter("ngayKetThuc");
+9:     Bill8DAO dao = new Bill8DAO();
+
+
+Stacktrace:] with root cause
+	java.lang.NumberFormatException: Cannot parse null string
+		at java.base/java.lang.Integer.parseInt(Integer.java:624)
+		at java.base/java.lang.Integer.parseInt(Integer.java:778)
+		at org.apache.jsp.frontend.module2.InvoiceListView8_jsp._jspService(InvoiceListView8_jsp.java:132)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:65)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:500)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:359)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:310)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:197)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:57)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:164)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:86)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:782)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:71)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:348)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:413)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:71)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1308)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:2198)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:74)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:974)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:492)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:80)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+05-Nov-2026 19:10:49.362 SEVERE [http-nio-8080-exec-10] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/gara-man] threw exception [An exception occurred processing [/frontend/module2/InvoiceListView8.jsp] at line [7]
+
+4: <%@ page import="backend.dao.Bill8DAO" %>
+5: <%
+6:     String idHangMuc = request.getParameter("idHangMuc");
+7:     int id = Integer.parseInt(request.getParameter("id"));
+8:     String ngayBatDau = request.getParameter("ngayBatDau");
+9:     String ngayKetThuc = request.getParameter("ngayKetThuc");
+10:     String loai = request.getParameter("loai");
+
+
+Stacktrace:] with root cause
+	java.lang.NumberFormatException: Cannot parse null string
+		at java.base/java.lang.Integer.parseInt(Integer.java:624)
+		at java.base/java.lang.Integer.parseInt(Integer.java:778)
+		at org.apache.jsp.frontend.module2.InvoiceListView8_jsp._jspService(InvoiceListView8_jsp.java:133)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:65)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:500)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:359)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:310)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:197)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:57)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:164)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:86)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:782)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:71)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:348)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:413)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:71)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1308)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:2198)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:74)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:974)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:492)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:80)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+05-Nov-2026 19:10:50.808 SEVERE [http-nio-8080-exec-3] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/gara-man] threw exception [An exception occurred processing [/frontend/module2/InvoiceListView8.jsp] at line [7]
+
+4: <%@ page import="backend.dao.Bill8DAO" %>
+5: <%
+6:     String idHangMuc = request.getParameter("idHangMuc");
+7:     int id = Integer.parseInt(request.getParameter("id"));
+8:     String ngayBatDau = request.getParameter("ngayBatDau");
+9:     String ngayKetThuc = request.getParameter("ngayKetThuc");
+10:     String loai = request.getParameter("loai");
+
+
+Stacktrace:] with root cause
+	java.lang.NumberFormatException: Cannot parse null string
+		at java.base/java.lang.Integer.parseInt(Integer.java:624)
+		at java.base/java.lang.Integer.parseInt(Integer.java:778)
+		at org.apache.jsp.frontend.module2.InvoiceListView8_jsp._jspService(InvoiceListView8_jsp.java:133)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:65)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:500)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:359)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:310)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:197)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:57)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:164)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:86)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:782)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:71)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:348)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:413)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:71)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1308)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:2198)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:74)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:974)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:492)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:80)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+05-Nov-2026 19:10:53.431 SEVERE [http-nio-8080-exec-5] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/gara-man] threw exception [An exception occurred processing [/frontend/module2/InvoiceListView8.jsp] at line [7]
+
+4: <%@ page import="backend.dao.Bill8DAO" %>
+5: <%
+6:     String idHangMuc = request.getParameter("idHangMuc");
+7:     int id = Integer.parseInt(request.getParameter("id"));
+8:     String ngayBatDau = request.getParameter("ngayBatDau");
+9:     String ngayKetThuc = request.getParameter("ngayKetThuc");
+10:     String loai = request.getParameter("loai");
+
+
+Stacktrace:] with root cause
+	java.lang.NumberFormatException: Cannot parse null string
+		at java.base/java.lang.Integer.parseInt(Integer.java:624)
+		at java.base/java.lang.Integer.parseInt(Integer.java:778)
+		at org.apache.jsp.frontend.module2.InvoiceListView8_jsp._jspService(InvoiceListView8_jsp.java:133)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:65)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:500)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:359)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:310)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:197)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:57)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:164)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:86)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:782)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:71)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:348)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:413)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:71)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1308)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:2198)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:74)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:974)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:492)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:80)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+05-Nov-2026 19:11:04.165 SEVERE [http-nio-8080-exec-7] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/gara-man] threw exception [An exception occurred processing [/frontend/module2/InvoiceListView8.jsp] at line [7]
+
+4: <%@ page import="backend.dao.Bill8DAO" %>
+5: <%
+6:     String idHangMuc = request.getParameter("idHangMuc");
+7:     int id = Integer.parseInt(request.getParameter("id"));
+8:     String ngayBatDau = request.getParameter("ngayBatDau");
+9:     String ngayKetThuc = request.getParameter("ngayKetThuc");
+10:     String loai = request.getParameter("loai");
+
+
+Stacktrace:] with root cause
+	java.lang.NumberFormatException: For input string: "null"
+		at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+		at java.base/java.lang.Integer.parseInt(Integer.java:662)
+		at java.base/java.lang.Integer.parseInt(Integer.java:778)
+		at org.apache.jsp.frontend.module2.InvoiceListView8_jsp._jspService(InvoiceListView8_jsp.java:133)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:65)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:500)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:359)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:310)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:197)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:57)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:164)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:86)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:782)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:71)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:348)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:413)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:71)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1308)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:2198)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:74)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:974)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:492)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:80)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+05-Nov-2026 19:46:54.265 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+05-Nov-2026 19:46:54.265 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+05-Nov-2026 19:46:54.275 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@54e81b21')
+05-Nov-2026 21:23:48.094 SEVERE [http-nio-8080-exec-8] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/gara-man] threw exception [org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [7] in the jsp file: [/frontend/module2/InvoiceDetailView8.jsp]
+The method getKhachHangTheoHoaDon(int) in the type DetailBill8DAO is not applicable for the arguments ()
+4: <%
+5:     
+6:     DetailBill8DAO dao = new DetailBill8DAO();
+7:     Customer8 kh = dao.getKhachHangTheoHoaDon();
+8: %> 
+9: <!DOCTYPE html>
+10: <html lang="vi">
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [7] in the jsp file: [/frontend/module2/InvoiceDetailView8.jsp]
+The method getKhachHangTheoHoaDon(int) in the type DetailBill8DAO is not applicable for the arguments ()
+4: <%
+5:     
+6:     DetailBill8DAO dao = new DetailBill8DAO();
+7:     Customer8 kh = dao.getKhachHangTheoHoaDon();
+8: %> 
+9: <!DOCTYPE html>
+10: <html lang="vi">
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:70)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:189)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:593)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:409)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:381)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:367)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:736)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:440)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:359)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:310)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:197)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:57)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:164)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:86)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:782)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:71)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:348)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:413)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:71)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1308)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:2198)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:74)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:974)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:492)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:80)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+05-Nov-2026 21:38:08.646 SEVERE [http-nio-8080-exec-9] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/gara-man] threw exception [An exception occurred processing [/frontend/module2/InvoiceDetailView8.jsp] at line [9]
+
+6:     int idHD = Integer.parseInt(request.getParameter("idHD"));
+7:     DetailBill8DAO dao = new DetailBill8DAO();
+8:     Customer8 kh = dao.getKhachHangTheoHoaDon(idHD);
+9:     Bill8 b = dao.getChiTietHoaDon(idHD);
+10: %> 
+11: <!DOCTYPE html>
+12: <html lang="vi">
+
+
+Stacktrace:] with root cause
+	java.lang.NoSuchMethodError: 'backend.entity.Bill8 backend.dao.DetailBill8DAO.getChiTietHoaDon(int)'
+		at org.apache.jsp.frontend.module2.InvoiceDetailView8_jsp._jspService(InvoiceDetailView8_jsp.java:135)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:65)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:500)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:359)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:310)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:197)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:57)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:164)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:86)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:782)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:71)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:348)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:413)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:71)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1308)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:2198)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:74)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:974)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:492)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:80)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+05-Nov-2026 21:39:11.885 SEVERE [http-nio-8080-exec-8] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/gara-man] threw exception [An exception occurred processing [/frontend/module2/InvoiceDetailView8.jsp] at line [9]
+
+6:     int idHD = Integer.parseInt(request.getParameter("idHD"));
+7:     DetailBill8DAO dao = new DetailBill8DAO();
+8:     Customer8 kh = dao.getKhachHangTheoHoaDon(idHD);
+9:     Bill8 b = dao.getChiTietHoaDon(idHD);
+10: %> 
+11: <!DOCTYPE html>
+12: <html lang="vi">
+
+
+Stacktrace:] with root cause
+	java.lang.NoSuchMethodError: 'backend.entity.Bill8 backend.dao.DetailBill8DAO.getChiTietHoaDon(int)'
+		at org.apache.jsp.frontend.module2.InvoiceDetailView8_jsp._jspService(InvoiceDetailView8_jsp.java:135)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:65)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:500)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:359)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:310)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:197)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:57)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:164)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:86)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:782)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:71)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:348)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:413)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:71)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1308)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:2198)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:74)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:974)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:492)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:80)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+05-Nov-2026 21:40:41.292 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+05-Nov-2026 21:40:41.292 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+05-Nov-2026 21:40:41.299 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@54e81b21')
+05-Nov-2026 21:40:44.401 SEVERE [http-nio-8080-exec-10] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/gara-man] threw exception [An exception occurred processing [frontend/module1/dat-lich.jsp] at line [8]
+
+5: <%
+6:     Integer idKH = (Integer) session.getAttribute("idKH");
+7:     Customer8 khachHang = new Customer8();
+8:     khachHang.setId(idKH);
+9:     if("POST".equalsIgnoreCase(request.getMethod())){
+10:         String ngayHen = request.getParameter("ngayHen");
+11:         String gioHen = request.getParameter("gioHen");
+
+
+Stacktrace:] with root cause
+	java.lang.NullPointerException: Cannot invoke "java.lang.Integer.intValue()" because "idKH" is null
+		at org.apache.jsp.frontend.module1.dat_002dlich_jsp._jspService(dat_002dlich_jsp.java:134)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:65)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:500)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:359)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:310)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:197)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:57)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:164)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:86)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:782)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:71)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:348)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:413)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:71)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1308)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:2198)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:74)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:974)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:492)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:80)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+05-Nov-2026 21:43:51.568 SEVERE [http-nio-8080-exec-8] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/gara-man] threw exception [org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [75] in the jsp file: [/frontend/module2/InvoiceDetailView8.jsp]
+The method getNgayLap() is undefined for the type Customer8
+72:     <div class="invoice-info">
+73:         <p>Mã HĐ: <%= b.getMaHD()%></span></p>
+74:         <p>Khách Hàng: <%= kh.getHoTen()%></span></p>
+75:         <p>Ngày Lập: <%= kh.getNgayLap()%>></span></p>
+76:     </div>
+77:     <div class="table-wrap">
+78:         <table>
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [75] in the jsp file: [/frontend/module2/InvoiceDetailView8.jsp]
+The method getNgayLap() is undefined for the type Customer8
+72:     <div class="invoice-info">
+73:         <p>Mã HĐ: <%= b.getMaHD()%></span></p>
+74:         <p>Khách Hàng: <%= kh.getHoTen()%></span></p>
+75:         <p>Ngày Lập: <%= kh.getNgayLap()%>></span></p>
+76:     </div>
+77:     <div class="table-wrap">
+78:         <table>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:70)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:189)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:593)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:409)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:381)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:367)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:736)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:440)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:359)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:310)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:197)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:57)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:164)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:86)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:782)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:71)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:348)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:413)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:71)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1308)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:2198)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:74)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:974)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:492)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:80)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+05-Nov-2026 21:44:18.964 SEVERE [http-nio-8080-exec-6] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/gara-man] threw exception [org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [75] in the jsp file: [/frontend/module2/InvoiceDetailView8.jsp]
+The method getNgayLap() is undefined for the type Customer8
+72:     <div class="invoice-info">
+73:         <p>Mã HĐ: <%= b.getMaHD()%></span></p>
+74:         <p>Khách Hàng: <%= kh.getHoTen()%></span></p>
+75:         <p>Ngày Lập: <%= kh.getNgayLap()%>></span></p>
+76:     </div>
+77:     <div class="table-wrap">
+78:         <table>
+
+
+Stacktrace:] with root cause
+	org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: [75] in the jsp file: [/frontend/module2/InvoiceDetailView8.jsp]
+The method getNgayLap() is undefined for the type Customer8
+72:     <div class="invoice-info">
+73:         <p>Mã HĐ: <%= b.getMaHD()%></span></p>
+74:         <p>Khách Hàng: <%= kh.getHoTen()%></span></p>
+75:         <p>Ngày Lập: <%= kh.getNgayLap()%>></span></p>
+76:     </div>
+77:     <div class="table-wrap">
+78:         <table>
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:70)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:189)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:593)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:409)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:381)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:367)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:736)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:440)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:359)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:310)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:197)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:57)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:164)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:86)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:782)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:71)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:348)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:413)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:71)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1308)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:2198)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:74)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:974)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:492)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:80)
+		at java.base/java.lang.Thread.run(Thread.java:1583)

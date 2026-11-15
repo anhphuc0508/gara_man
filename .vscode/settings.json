@@ -1,0 +1,17 @@
+{
+    "java.project.sourcePaths": [
+        "apache-tomcat-10.1.61/apache-tomcat-10.1.61/webapps/gara-man"
+    ],
+    "java.project.outputPath": "apache-tomcat-10.1.61/apache-tomcat-10.1.61/webapps/gara-man/WEB-INF/classes",
+    "java.project.referencedLibraries": [
+        "apache-tomcat-10.1.61/apache-tomcat-10.1.61/webapps/gara-man/WEB-INF/lib/*.jar"
+    ],
+    "java.autobuild.enabled": true,
+    "java.configuration.runtimes": [
+    {
+        "name": "JavaSE-21",
+        "path": "C:/Users/PC/.jdks/jbr-21.0.11",
+        "default": true
+    }
+]
+}

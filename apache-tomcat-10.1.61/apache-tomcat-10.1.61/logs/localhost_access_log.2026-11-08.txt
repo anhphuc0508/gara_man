@@ -1,0 +1,9 @@
+0:0:0:0:0:0:0:1 - - [08/Nov/2026:09:19:33 +0700] "GET /gara-man/frontend/module1/index.jsp HTTP/1.1" 200 1637
+0:0:0:0:0:0:0:1 - - [08/Nov/2026:09:19:33 +0700] "GET /gara-man/frontend/module1/index.jsp HTTP/1.1" 200 1637
+0:0:0:0:0:0:0:1 - - [08/Nov/2026:09:19:33 +0700] "GET /gara-man/frontend/module1/index.jsp HTTP/1.1" 200 1637
+0:0:0:0:0:0:0:1 - - [08/Nov/2026:09:19:34 +0700] "GET /gara-man/frontend/module1/index.jsp HTTP/1.1" 200 1637
+0:0:0:0:0:0:0:1 - - [08/Nov/2026:09:19:39 +0700] "GET /gara-man/frontend/module2/MainManagerView8.jsp HTTP/1.1" 200 2461
+0:0:0:0:0:0:0:1 - - [08/Nov/2026:09:19:40 +0700] "GET /gara-man/frontend/module2/ManagerDashboardView8.jsp HTTP/1.1" 200 5946
+0:0:0:0:0:0:0:1 - - [08/Nov/2026:09:20:00 +0700] "GET /gara-man/frontend/module2/ManagerDashboardView8.jsp HTTP/1.1" 200 5946
+0:0:0:0:0:0:0:1 - - [08/Nov/2026:09:20:11 +0700] "GET /gara-man/frontend/module2/ManagerDashboardView8.jsp HTTP/1.1" 200 5946
+0:0:0:0:0:0:0:1 - - [08/Nov/2026:09:20:47 +0700] "GET /gara-man/frontend/module2/ServicePartStatView8.jsp?ngayBatDau=2026-11-01&ngayKetThuc=2026-11-04 HTTP/1.1" 200 15089

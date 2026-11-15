@@ -1,0 +1,13 @@
+<%@ page pageEncoding="UTF-8" %>
+<%
+    response.setHeader("Cache-Control", "no-store");
+    response.setHeader("Pragma", "no-cache");
+    if (session.getAttribute("thanhVien") == null) {
+        response.sendRedirect(request.getContextPath() + "/frontend/LoginView8.jsp");
+        return;
+    }
+    if (!"ADMIN".equals(session.getAttribute("vaiTro")) || session.getAttribute("idQL") == null) {
+        response.sendError(403, "Chức năng này dành cho nhân viên quản lý.");
+        return;
+    }
+%>
