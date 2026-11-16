@@ -171,7 +171,7 @@ if ("POST".equalsIgnoreCase(request.getMethod())) {
             </div>
             <div class="form-row">
                 <label for="description">Mô Tả:</label>
-                <input class="inline-input" id="description" name="moTa" value="Xe bị hỏng" maxlength="300" required>
+                <input class="inline-input" id="description" name="moTa" maxlength="300" required>
             </div>
             <div class="form-row vehicle-row">
                 <label for="vehicle-type">Loại Xe:</label>
@@ -183,7 +183,7 @@ if ("POST".equalsIgnoreCase(request.getMethod())) {
             </div>
             <div class="form-row">
                 <label for="license-plate">Biển Số Xe:</label>
-                <input class="inline-input" id="license-plate" name="bienSoXe" value="17A - 123456"
+                <input class="inline-input" id="license-plate" name="bienSoXe" 
                        maxlength="20" required>
             </div>
             <div class="actions">
