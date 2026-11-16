@@ -13,3 +13,271 @@
 16-Nov-2026 14:04:58.860 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
 16-Nov-2026 14:04:58.860 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
 16-Nov-2026 14:04:58.866 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@38d5b107')
+16-Nov-2026 17:44:18.849 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+16-Nov-2026 17:44:18.849 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+16-Nov-2026 17:44:18.853 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@17f9344b')
+16-Nov-2026 17:45:37.893 SEVERE [http-nio-8080-exec-10] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/gara-man] threw exception [An exception occurred processing [frontend/module2/InvoiceListView8.jsp] at line [31]
+
+28:         return;
+29:     }
+30: 
+31:     ArrayList<Bill8> dsHoaDon = new Bill8DAO().getHoaDon(id, ngayBatDau, ngayKetThuc, loai);
+32:     String quayLaiUrl = managerUrl("ServicePartStatView8.jsp", "ngayBatDau", ngayBatDau,
+33:             "ngayKetThuc", ngayKetThuc);
+34: %>
+
+
+Stacktrace:] with root cause
+	java.lang.ClassNotFoundException: backend.entity.Bill8
+		at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1467)
+		at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1276)
+		at backend.dao.Bill8DAO.getHoaDon(Bill8DAO.java:50)
+		at org.apache.jsp.frontend.module2.InvoiceListView8_jsp._jspService(InvoiceListView8_jsp.java:212)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:65)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:500)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:359)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:310)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:197)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:57)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:164)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:86)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:782)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:71)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:348)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:413)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:71)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1308)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:2198)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:74)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:974)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:492)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:80)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+16-Nov-2026 17:45:45.442 SEVERE [http-nio-8080-exec-1] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/gara-man] threw exception [An exception occurred processing [frontend/module2/InvoiceListView8.jsp] at line [31]
+
+28:         return;
+29:     }
+30: 
+31:     ArrayList<Bill8> dsHoaDon = new Bill8DAO().getHoaDon(id, ngayBatDau, ngayKetThuc, loai);
+32:     String quayLaiUrl = managerUrl("ServicePartStatView8.jsp", "ngayBatDau", ngayBatDau,
+33:             "ngayKetThuc", ngayKetThuc);
+34: %>
+
+
+Stacktrace:] with root cause
+	java.lang.ClassNotFoundException: backend.entity.Bill8
+		at backend.dao.Bill8DAO.getHoaDon(Bill8DAO.java:50)
+		at org.apache.jsp.frontend.module2.InvoiceListView8_jsp._jspService(InvoiceListView8_jsp.java:212)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:65)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:500)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:359)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:310)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:197)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:57)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:164)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:86)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:782)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:71)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:348)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:413)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:71)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1308)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:2198)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:74)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:974)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:492)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:80)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+16-Nov-2026 17:45:51.789 SEVERE [http-nio-8080-exec-2] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/gara-man] threw exception [An exception occurred processing [frontend/module2/InvoiceListView8.jsp] at line [31]
+
+28:         return;
+29:     }
+30: 
+31:     ArrayList<Bill8> dsHoaDon = new Bill8DAO().getHoaDon(id, ngayBatDau, ngayKetThuc, loai);
+32:     String quayLaiUrl = managerUrl("ServicePartStatView8.jsp", "ngayBatDau", ngayBatDau,
+33:             "ngayKetThuc", ngayKetThuc);
+34: %>
+
+
+Stacktrace:] with root cause
+	java.lang.ClassNotFoundException: backend.entity.Bill8
+		at backend.dao.Bill8DAO.getHoaDon(Bill8DAO.java:50)
+		at org.apache.jsp.frontend.module2.InvoiceListView8_jsp._jspService(InvoiceListView8_jsp.java:212)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:65)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:500)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:359)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:310)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:197)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:57)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:164)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:86)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:782)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:71)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:348)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:413)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:71)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1308)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:2198)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:74)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:974)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:492)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:80)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+16-Nov-2026 17:47:44.116 SEVERE [http-nio-8080-exec-6] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/gara-man] threw exception [An exception occurred processing [frontend/module2/InvoiceListView8.jsp] at line [31]
+
+28:         return;
+29:     }
+30: 
+31:     ArrayList<Bill8> dsHoaDon = new Bill8DAO().getHoaDon(id, ngayBatDau, ngayKetThuc, loai);
+32:     String quayLaiUrl = managerUrl("ServicePartStatView8.jsp", "ngayBatDau", ngayBatDau,
+33:             "ngayKetThuc", ngayKetThuc);
+34: %>
+
+
+Stacktrace:] with root cause
+	java.lang.ClassNotFoundException: backend.entity.Bill8
+		at backend.dao.Bill8DAO.getHoaDon(Bill8DAO.java:50)
+		at org.apache.jsp.frontend.module2.InvoiceListView8_jsp._jspService(InvoiceListView8_jsp.java:212)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:65)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:500)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:359)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:310)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:197)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:57)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:164)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:86)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:782)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:71)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:348)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:413)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:71)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1308)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:2198)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:74)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:974)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:492)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:80)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+16-Nov-2026 17:49:44.208 SEVERE [http-nio-8080-exec-7] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/gara-man] threw exception [An exception occurred processing [frontend/module2/InvoiceListView8.jsp] at line [31]
+
+28:         return;
+29:     }
+30: 
+31:     ArrayList<Bill8> dsHoaDon = new Bill8DAO().getHoaDon(id, ngayBatDau, ngayKetThuc, loai);
+32:     String quayLaiUrl = managerUrl("ServicePartStatView8.jsp", "ngayBatDau", ngayBatDau,
+33:             "ngayKetThuc", ngayKetThuc);
+34: %>
+
+
+Stacktrace:] with root cause
+	java.lang.ClassNotFoundException: backend.entity.Bill8
+		at backend.dao.Bill8DAO.getHoaDon(Bill8DAO.java:50)
+		at org.apache.jsp.frontend.module2.InvoiceListView8_jsp._jspService(InvoiceListView8_jsp.java:212)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:65)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:500)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:359)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:310)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:197)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:57)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:164)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:86)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:782)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:71)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:348)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:413)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:71)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1308)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:2198)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:74)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:974)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:492)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:80)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+16-Nov-2026 17:49:44.222 SEVERE [http-nio-8080-exec-6] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() for servlet [jsp] in context with path [/gara-man] threw exception [An exception occurred processing [frontend/module2/InvoiceListView8.jsp] at line [31]
+
+28:         return;
+29:     }
+30: 
+31:     ArrayList<Bill8> dsHoaDon = new Bill8DAO().getHoaDon(id, ngayBatDau, ngayKetThuc, loai);
+32:     String quayLaiUrl = managerUrl("ServicePartStatView8.jsp", "ngayBatDau", ngayBatDau,
+33:             "ngayKetThuc", ngayKetThuc);
+34: %>
+
+
+Stacktrace:] with root cause
+	java.lang.ClassNotFoundException: backend.entity.Bill8
+		at backend.dao.Bill8DAO.getHoaDon(Bill8DAO.java:50)
+		at org.apache.jsp.frontend.module2.InvoiceListView8_jsp._jspService(InvoiceListView8_jsp.java:212)
+		at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:65)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:500)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:359)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:310)
+		at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:197)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:57)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:142)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:164)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:88)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:86)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:782)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:71)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:348)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:413)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:71)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1308)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:2198)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:74)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:974)
+		at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:492)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:80)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+16-Nov-2026 17:49:59.853 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+16-Nov-2026 17:49:59.853 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
+16-Nov-2026 17:50:24.807 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+16-Nov-2026 17:50:24.807 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+16-Nov-2026 17:50:24.812 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@632aa1a3')
