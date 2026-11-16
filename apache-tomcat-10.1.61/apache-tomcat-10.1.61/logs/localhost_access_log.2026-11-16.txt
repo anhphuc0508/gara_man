@@ -176,3 +176,12 @@
 127.0.0.1 - - [16/Nov/2026:17:50:50 +0700] "GET /gara-man/frontend/module2/InvoiceDetailView8.jsp?idHD=90&idHangMuc=20&loai=dich-vu&ngayBatDau=2026-09-01&ngayKetThuc=2026-11-30 HTTP/1.1" 200 3188
 127.0.0.1 - - [16/Nov/2026:17:50:50 +0700] "GET /gara-man/frontend/module2/InvoiceListView8.jsp?id=6&loai=phu-tung&ngayBatDau=2026-09-01&ngayKetThuc=2026-11-30 HTTP/1.1" 200 3657
 127.0.0.1 - - [16/Nov/2026:17:50:50 +0700] "GET /gara-man/frontend/module2/InvoiceDetailView8.jsp?idHD=90&idHangMuc=6&loai=phu-tung&ngayBatDau=2026-09-01&ngayKetThuc=2026-11-30 HTTP/1.1" 200 3188
+0:0:0:0:0:0:0:1 - - [16/Nov/2026:17:51:33 +0700] "GET /gara-man/ HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [16/Nov/2026:17:51:33 +0700] "GET /gara-man/frontend/LoginView8.jsp HTTP/1.1" 200 1922
+0:0:0:0:0:0:0:1 - - [16/Nov/2026:17:51:36 +0700] "POST /gara-man/frontend/LoginView8.jsp HTTP/1.1" 303 5
+0:0:0:0:0:0:0:1 - - [16/Nov/2026:17:51:36 +0700] "GET /gara-man/frontend/module2/MainManagerView8.jsp HTTP/1.1" 200 628
+0:0:0:0:0:0:0:1 - - [16/Nov/2026:17:51:37 +0700] "GET /gara-man/frontend/module2/StatMenuView8.jsp HTTP/1.1" 200 550
+0:0:0:0:0:0:0:1 - - [16/Nov/2026:17:51:38 +0700] "GET /gara-man/frontend/module2/ServicePartStatView8.jsp HTTP/1.1" 200 3068
+0:0:0:0:0:0:0:1 - - [16/Nov/2026:17:51:44 +0700] "GET /gara-man/frontend/module2/ServicePartStatView8.jsp?ngayBatDau=2026-09-01&ngayKetThuc=2026-11-30 HTTP/1.1" 200 14502
+0:0:0:0:0:0:0:1 - - [16/Nov/2026:17:51:45 +0700] "GET /gara-man/frontend/module2/InvoiceListView8.jsp?id=20&loai=dich-vu&ngayBatDau=2026-09-01&ngayKetThuc=2026-11-30 HTTP/1.1" 200 4005
+0:0:0:0:0:0:0:1 - - [16/Nov/2026:17:51:46 +0700] "GET /gara-man/frontend/module2/InvoiceDetailView8.jsp?idHD=90&idHangMuc=20&loai=dich-vu&ngayBatDau=2026-09-01&ngayKetThuc=2026-11-30 HTTP/1.1" 200 3188

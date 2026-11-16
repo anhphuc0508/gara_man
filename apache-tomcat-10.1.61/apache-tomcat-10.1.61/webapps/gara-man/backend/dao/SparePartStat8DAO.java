@@ -12,7 +12,7 @@ public class SparePartStat8DAO extends DAO {
     public ArrayList<SparePartStat8> getTKPhuTung(String batDau, String ketThuc) throws SQLException {
         ArrayList<SparePartStat8> arr = new ArrayList<>();
         String sql
-                = "SELECT pt.id, pt.maPhuTung, pt.ten, SUM(ct.soLuong) AS tongSoLuong, SUM(ct.soLuong * ct.donGiaXuat) AS doanhThu"
+                = "SELECT pt.id, pt.maPhuTung, pt.ten, SUM(ct.soLuong) AS tongSoLuong, SUM(ct.soLuongSuDung * ct.donGiaXuat) AS doanhThu"
                 + " FROM tblSparePart8 pt"
                 + " JOIN tblSparePartDetail8 ct"
                 + " ON ct.tblSparePart8id = pt.id"
