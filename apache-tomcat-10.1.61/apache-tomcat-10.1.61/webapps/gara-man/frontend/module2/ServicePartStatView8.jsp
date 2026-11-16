@@ -33,7 +33,7 @@
         dsDichVu = new ServiceStat8DAO().getDichVu(ngayBatDau, ngayKetThuc);
         dsPhuTung = new SparePartStat8DAO().getTKPhuTung(ngayBatDau, ngayKetThuc);
     }
-    String quayLaiUrl = managerUrl("ManagerDashboardView8.jsp",
+    String quayLaiUrl = managerUrl("StatMenuView8.jsp",
             "ngayBatDau", ngayBatDau, "ngayKetThuc", ngayKetThuc);
 %>
 <!DOCTYPE html>

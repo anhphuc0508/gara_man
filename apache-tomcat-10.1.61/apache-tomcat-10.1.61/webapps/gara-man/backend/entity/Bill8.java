@@ -8,7 +8,7 @@ public class Bill8 {
     private Date ngayThanhToan;
     private String maHD;
     private BillDetail8 bd;
-
+    private SaleStaff8 nv;
     public Bill8() {
     }
 
@@ -63,5 +63,12 @@ public class Bill8 {
 
     public void setBd(BillDetail8 bd) {
         this.bd = bd;
+    }
+    public SaleStaff8 getNV(){
+        return nv;
+    }
+
+    public void setNV(SaleStaff8 nv) {
+        this.nv = nv;
     }
 }

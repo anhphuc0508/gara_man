@@ -9,7 +9,7 @@ public class ServiceRequestReceipt8 {
     private ServiceDetail8[] dsChiTietDichVu;
     private SparePartDetail8[] dsChiTietPhuTung;
     private AssignDetail8[] dsPhanCong;
-
+    private SaleStaff8 nv;
     public ServiceRequestReceipt8() {
     }
 

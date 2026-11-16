@@ -54,6 +54,8 @@
         <p>Mã HĐ: <%= managerHtml(hoaDon.getMaHD()) %></p>
         <p>Khách Hàng: <%= managerHtml(khachHang.getHoTen()) %></p>
         <p>Ngày Lập: <%= managerDate(hoaDon.getNgayLap()) %></p>
+        <p>Người Lập: <span id="invoice-created-by"><%= hoaDon.getNV() == null
+                ? "Chưa có thông tin" : managerHtml(hoaDon.getNV().getHoTen()) %></span></p>
     </div>
     <div class="table-wrap">
         <table class="detail-table" aria-label="Chi tiết dịch vụ và phụ tùng của hóa đơn">

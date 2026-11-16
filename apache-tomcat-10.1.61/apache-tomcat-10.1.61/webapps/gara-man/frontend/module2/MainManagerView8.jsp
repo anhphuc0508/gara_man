@@ -14,7 +14,7 @@
     <%@ include file="/WEB-INF/jspf/account-bar.jspf" %>
     <h1>TRANG CHỦ QUẢN LÝ</h1>
     <div class="home-action">
-        <a class="button" href="ManagerDashboardView8.jsp">XEM THỐNG KÊ DV/PT</a>
+        <a class="button" href="StatMenuView8.jsp">XEM THỐNG KÊ DV/PT</a>
     </div>
 </main>
 </body>

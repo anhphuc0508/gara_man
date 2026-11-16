@@ -17,14 +17,15 @@ public class DetailBill8DAO extends DAO {
         Appointment8 lichHen = new Appointment8();
         Customer8 kh = new Customer8();
 
-        // 1. Lấy hóa đơn, phiếu, lịch hẹn và khách hàng.
+        // 1. Lấy hóa đơn, phiếu, lịch hẹn, khách hàng và nhân viên lập.
         String sqlHoaDon = """
             SELECT hd.id, hd.maHD, hd.ngayLap, hd.ngayThanhToan,
                    bd.id AS idChiTietHoaDon,
                    p.id AS idPhieu, p.ngayLap AS ngayLapPhieu,
                    p.bienSoXe, p.loaiXe, p.moTa,
                    lh.id AS idLichHen, lh.ngayHen, lh.gioHen,
-                   kh.id AS idKH, tv.hoTen, tv.SDT, tv.email
+                   kh.id AS idKH, tv.hoTen, tv.SDT, tv.email,
+                   nv.id AS idNhanVienLap, tvnv.hoTen AS tenNhanVienLap
             FROM tblBill8 hd
             JOIN tblBillDetail8 bd ON bd.tblBill8id = hd.id
             JOIN tblServiceRequestReceipt8 p
@@ -32,6 +33,9 @@ public class DetailBill8DAO extends DAO {
             JOIN tblAppointment8 lh ON lh.id = p.tblAppointment8id
             JOIN tblCustomer8 kh ON kh.id = lh.tblCustomer8id
             JOIN tblMember8 tv ON tv.id = kh.tblMember8id
+            LEFT JOIN tblSaleStaff8 nv ON nv.id = hd.tblSaleStaff8id
+            LEFT JOIN tblStaff8 s ON s.id = nv.tblStaff8id
+            LEFT JOIN tblMember8 tvnv ON tvnv.id = s.tblMember8id
             WHERE hd.id = ?
             """;
 
@@ -48,6 +52,14 @@ public class DetailBill8DAO extends DAO {
                 hoaDon.setNgayLap(Date.valueOf(rs.getString("ngayLap")));
                 hoaDon.setNgayThanhToan(
                         Date.valueOf(rs.getString("ngayThanhToan")));
+
+                int idNhanVienLap = rs.getInt("idNhanVienLap");
+                if (!rs.wasNull()) {
+                    SaleStaff8 nv = new SaleStaff8();
+                    nv.setId(idNhanVienLap);
+                    nv.setHoTen(rs.getString("tenNhanVienLap"));
+                    hoaDon.setNV(nv);
+                }
 
                 kh.setId(rs.getInt("idKH"));
                 kh.setHoTen(rs.getString("hoTen"));
